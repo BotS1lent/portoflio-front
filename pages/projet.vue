@@ -7,10 +7,11 @@
                 <h2 class="text-xl font-semibold">{{ project.title }}</h2>
                 <p class="text-gray-600">{{ project.description }}</p>
                 <div class="mt-4">
-                    <NuxtLink to="project.github" target="_blank" class="text-blue-500 hover:underline">Voir le code
+                    <NuxtLink v-bind:href="project.github" target="_blank" class="text-blue-500 hover:underline">Voir le
+                        code
                     </NuxtLink>
                     <span v-if="project.demo" class="mx-2">•</span>
-                    <NuxtLink v-if="project.demo" to="project.demo" target="_blank"
+                    <NuxtLink v-if="project.demo" v-bind:href="project.demo" target="_blank"
                         class="text-blue-500 hover:underline">
                         Voir la démo
                     </NuxtLink>
